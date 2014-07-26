@@ -1,9 +1,9 @@
-#ƒRƒƒ“ƒg
+#ã‚³ãƒ¡ãƒ³ãƒˆ
 
-print "Hello World" #I‚í‚Á‚½‚ ‚Æ‚É‰üs‚ª‚È‚¢
-puts "Hello World in puts" #‰üs‚ª‚ ‚é
-p "Hello World" #ƒf[ƒ^‚ÌŒ`®‚ª‚í‚©‚é‚æ‚¤‚É•\¦‚·‚é
+print "Hello World" #çµ‚ã‚ã£ãŸã‚ã¨ã«æ”¹è¡ŒãŒãªã„
+puts "Hello World in puts" #æ”¹è¡ŒãŒã‚ã‚‹
+p "Hello World" #ãƒ‡ãƒ¼ã‚¿ã®å½¢å¼ãŒã‚ã‹ã‚‹ã‚ˆã†ã«è¡¨ç¤ºã™ã‚‹
 
 =begin
-•¡”s‚ÌƒRƒƒ“ƒg
+è¤‡æ•°è¡Œã®ã‚³ãƒ¡ãƒ³ãƒˆ
 =end
