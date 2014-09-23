@@ -10,9 +10,5 @@ int main(void) {//ここからプログラム本体
 
 	return 0;//０を返す=無事終了しました
 }
-
-puts("Hello World");
-
-}
-return 0;
-//puts関数=文字を出力する
+/*実行結果"Hello World"と表示される
+ puts関数=文字を出力する*/
