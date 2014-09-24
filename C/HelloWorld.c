@@ -2,13 +2,14 @@
 /*複数行
  コメント*/
 
-#include <stdio.h> //ヘッダファイル読み込み
+#include <stdio.h>
 
-int main(void) {//ここからプログラム本体
+main(void){
 
-	puts("Hello World");//ひとつの命令が終わったら;をつける
+	puts("Hello World");//１つの命令が終わったら;をつける
 
-	return 0;//０を返す=無事終了しました
+return 0;
 }
+
 /*実行結果"Hello World"と表示される
  puts関数=文字を出力する*/
