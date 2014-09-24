@@ -2,7 +2,7 @@
 /*複数行
  コメント*/
 
-#include <stdio.h>
+#include <stdio.h>//Standard input outputというヘッダーファイルを読み込む
 
 main(void){
 
