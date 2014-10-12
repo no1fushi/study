@@ -1,0 +1,28 @@
+//共通の設定を部品化し呼び出す
+
+/*
+h1{
+color:#ooo;
+margin:10px;
+padding:5px;
+}
+h2{
+color:#fff;
+mrgin:10px;
+padding:5px;
+}
+*/
+
+.my-mixin{//クラスでもIDでも可
+	margin:10px;
+	padding:5px;
+}
+
+h1{
+	color:#000;
+	.my-mixin;
+}
+h2{
+	color:#fff;
+	.my-mixin;
+}

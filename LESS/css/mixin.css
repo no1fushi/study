@@ -1,0 +1,26 @@
+/*
+h1{
+color:#ooo;
+margin:10px;
+padding:5px;
+}
+h2{
+color:#fff;
+mrgin:10px;
+padding:5px;
+}
+*/
+.my-mixin {
+  margin: 10px;
+  padding: 5px;
+}
+h1 {
+  color: #000;
+  margin: 10px;
+  padding: 5px;
+}
+h2 {
+  color: #fff;
+  margin: 10px;
+  padding: 5px;
+}
