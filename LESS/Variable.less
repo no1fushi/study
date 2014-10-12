@@ -1,0 +1,14 @@
+//変数は以下のように定義する
+@mycolor:#000;
+//変数の演算
+@fontsize-h1:20px;
+@fontsize-h2:@fontsize-h1 - 5px;
+
+h1{
+color:@mycolor;
+font-size:@fontsize-h1;
+}
+
+h2{
+font-size:@fontsize-h2;
+}
