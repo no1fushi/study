@@ -1,38 +1,38 @@
-#【紹介】  
+##【紹介】  
 githubでも使われるこの(README.md)軽量マークアップ言語  
 マークダウン記法の勉強。htmlフォルダの中のファイルは同ファイル名  
 のmdファイルと連動してます。これよく考えたらソース読めなくね?  
 
-#【内容】  
-##・Heading  
+##【内容】  
+###・Heading  
 htmlでいうh1～h6の見出し  
 段落、改行のやり方
 
-##・Horizontalline  
+###・Horizontalline  
 htmlでいうhr  
 水平線
 
-##・Emphasis  
+###・Emphasis  
 htmlでいうem,strong  
 強調
 
-##・Quote  
+###・Quote  
 htmlでいうblockquote  
 引用文
 
-##・Code  
+###・Code  
 htmlでいうcode  
 ソースコード表示
 
-##・List  
+###・List  
 htmlでいうli  
 リスト
 
-##・Link  
+###・Link  
 htmlでいうa,mailto  
 リンク
 
-##・Image  
+###・Image  
 htmlでいうimg  
 画像
 
