@@ -1,19 +1,20 @@
-【紹介】  
+#【紹介】  
 CSSのメタ言語のLESSの勉強。  
 ドットインストール見ながらやったけど  
 何故かできないことが多い  
+ここにない機能は僕の環境ではできないことです  
   
-【内容】  
+#【内容】  
 CSSフォルダのCSSファイルはコンパイル結果です  
   
-Test.less 
+##・Test.less 
 コンパイルテスト、コメント  
   
-Variable.less  
+##・Variable.less  
 変数の練習、演算  
   
-Nest.less  
+##・Nest.less  
 入れ子構造の練習  
   
-mixin.less  
+##・mixin.less  
 mixin機能の練習
