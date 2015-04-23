@@ -52,11 +52,11 @@
 			<nav><!--メインナビゲーション(あくまでメインのナビ以外には使ってはいけない)-->
 
 				<ul>
-					<a href=""><li>ナビ1</a><!--/liはliが続くか親要素(この場合ul)にこれ以上内容がないなら省略可-->
-					<a href=""><li>ナビ2</a>
-					<a href=""><li>ナビ3</a>
-					<a href=""><li>ナビ4</a>
-					<a href=""><li>ナビ5</a>
+					<li><a href="">ナビ1</a><!--/liはliが続くか親要素(この場合ul)にこれ以上内容がないなら省略可-->
+					<li><a href="">ナビ2</a>
+					<li><a href="">ナビ3</a>
+					<li><a href="">ナビ4</a>
+					<li><a href="">ナビ5</a>
 				</ul>
 			</nav>
 
@@ -65,14 +65,14 @@
 		<article><!--メインコンテンツ(例:ブログの記事など)-->
 			<section>
 				<h2></h2>
-				<p></p>
+				<p>/p は直後に address, article, aside, blockquote, details, div, dl, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, main, menu, nav, ol, p, pre, section, table, ul 要素が続くか、親要素が a, audio, del, ins, map, noscript, video 以外で親要素にそれ以上内容がなければ省略可</p>
 				<p></p>
 				<p></p>
 			</section><!--コンテンツ内の見出しごとの区切り(artickeから独立も可、sectionの下層も可)-->
 
 			<section>
 				<h2></h2>
-				<p>/p は直後に address, article, aside, blockquote, details, div, dl, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, main, menu, nav, ol, p, pre, section, table, ul 要素が続くか、親要素が a, audio, del, ins, map, noscript, video 以外で親要素にそれ以上内容がなければ省略可</p>
+				<p></p>
 				<p></p>
 				<p></p>
 			</section>
@@ -86,19 +86,19 @@
 		</article>
 
 		<aside><!--サイドバー(例:広告やリンク、ナビなど)-->
-		<div class=""></div>
-		<div class=""></div>
-		<div class="">
-			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-		</div>
+			<div class="advertising"></div>
+			<div class="advertising"></div>
+			<div class="advertising">
+				<ul>
+					<li>ナビ</li>
+					<li>ナビ</li>
+					<li>ナビ</li>
+				</ul>
+			</div>
 		</aside>
 
 		<footer><!--フッター(下のヘッダー)-->
-			<p>Copyright&copy <a href="">text</a> All Rights Reserved</p><!--コピーライト-->
+			<p>Copyright&copy; <a href="">text</a> All Rights Reserved</p><!--コピーライト-->
 		</footer>
 
 	</div>
