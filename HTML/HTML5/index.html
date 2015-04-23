@@ -1,0 +1,112 @@
+<!DOCTYPE html><!--ドクタイプ宣言(おまじない)-->
+
+<html lang="ja"><!--HTMLを日本語で使いますよ{正しくはja-JP(言語-地域名)だが省略できる}-->
+<!--またその最初の内容がコメントでなければ省略可(この場合不可)-->
+
+<head><!--設定 内容が空か、最初の内容が要素なら省略可(この場合不可)-->
+
+<!--meta-->
+	<meta charset="UTF-8"><!--文字コードはUTF8ですよ-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--IEにChromeEngine積んである時はそれで表示しますよ-->
+	<meta name="copyright" content="Copyright かとちゃん All Rights Reserved"><!--コピーライト(著作権表示)-->
+	<meta name="author" content="かとちゃん"><!--作った人-->
+	<meta name="keywords" content="検索で引っかかって欲しいワード">
+	<meta name="description" content="見本ページ"><!--サイトの説明-->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"><!--スマホ時の表示-->
+	<meta name="format-detection" content="telephone=no"><!--数字を勝手に電話番号と認識させない-->
+
+<!--css読み込み(type="text/css"は省略可能)-->
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/style.css">
+<!--css直書き-->
+	<style>
+	#container{
+		width:100%;
+		height:100%;
+	}
+	</style>
+
+<!--IE対策(html5,css3)IE9以下はこれが適用される(これはhead内でないと適用されない)-->
+
+<!--[if lt IE 9]>
+<script src="/js/html5shiv-printshiv.js"></script>
+<script src="/js/css3-mediaqueries.js"></script>
+<![endif]-->
+
+
+<!--googlefont(詳しくはドットインストールのGooglefont参照)-->
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Playball'>
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Pacifico'>
+
+	<title>text</title><!--タイトル-->
+
+</head><!--直後に空白文字かコメントがなければ省略可(この場合不可)-->
+
+<body><!--内容  内容が空か、最初の内容が空白文字かコメントでなければ省略可(この場合不可)-->
+<!--また、最初の要素が meta, link, script, style, template なら省略不可-->
+
+	<div id="container"><!--divはスタイルの指定の時以外は使わない-->
+		<header><!--ヘッダー(タイトルやナビなど)-->
+
+			<h1>タイトル</h1><!--本当はサイト名でh1を使うのはあまり良くない-->
+			<nav><!--メインナビゲーション(あくまでメインのナビ以外には使ってはいけない)-->
+
+				<ul>
+					<a href=""><li>ナビ1</a><!--/liはliが続くか親要素(この場合ul)にこれ以上内容がないなら省略可-->
+					<a href=""><li>ナビ2</a>
+					<a href=""><li>ナビ3</a>
+					<a href=""><li>ナビ4</a>
+					<a href=""><li>ナビ5</a>
+				</ul>
+			</nav>
+
+		</header>
+
+		<article><!--メインコンテンツ(例:ブログの記事など)-->
+			<section>
+				<h2></h2>
+				<p></p>
+				<p></p>
+				<p></p>
+			</section><!--コンテンツ内の見出しごとの区切り(artickeから独立も可、sectionの下層も可)-->
+
+			<section>
+				<h2></h2>
+				<p>/p は直後に address, article, aside, blockquote, details, div, dl, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, main, menu, nav, ol, p, pre, section, table, ul 要素が続くか、親要素が a, audio, del, ins, map, noscript, video 以外で親要素にそれ以上内容がなければ省略可</p>
+				<p></p>
+				<p></p>
+			</section>
+
+			<section>
+				<h2></h2>
+				<p></p>
+				<p></p>
+				<p></p>
+			</section>
+		</article>
+
+		<aside><!--サイドバー(例:広告やリンク、ナビなど)-->
+		<div class=""></div>
+		<div class=""></div>
+		<div class="">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		</aside>
+
+		<footer><!--フッター(下のヘッダー)-->
+			<p>Copyright&copy <a href="">text</a> All Rights Reserved</p><!--コピーライト-->
+		</footer>
+
+	</div>
+
+
+<!---JavaScript(読み込み速度のためできるだけ最後に書く)type="text/javascript"は省略可能-->
+<script src="/js/footer.js"></script>
+
+</body><!--直後にコメントが続かなければ省略可(この場合不可)-->
+
+</html><!--直後にコメントがなければ省略可(この場合不可)-->
