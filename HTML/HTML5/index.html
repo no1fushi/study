@@ -13,6 +13,15 @@
 	<meta name="description" content="見本ページ"><!--サイトの説明-->
 	<meta name="viewport" content="width=device-width,initial-scale=1.0"><!--スマホ時の表示-->
 	<meta name="format-detection" content="telephone=no"><!--数字を勝手に電話番号と認識させない-->
+	<meta http-equiv="default-style" content="/css/style.css"><!--たくさんCSSがある場合優先して使うCSSを書く-->
+	<!--<meta name="robots" content="noindex,nofollow">は検索されないようにする-->
+	<!--<meta name="generator" content="ツール名">何かのツールを使ってサイトを作った場合自動で追加される。手書きの場合なし-->
+	<!--<meta http-equiv="content-language" content="ja">htmlタグで指定しているためHTML5では各必要はない。使ってはいけないわけではない-->
+	<!--<meta http-equiv="content-type" content="text/html; charset=UTF-8">使ってはいけないわけではないが文字コード指定は省略して使う-->
+	<!--<meta http-equiv="refresh" content="5" url="newpage.html">URLリダイレクト(違うページに飛ばすこの場合5秒後)を行うときに書く-->
+	<!--<meta name="アプリケーション名" content="">そのページはwebアプリケーションの場合に書く-->
+
+	<!--<base href="http://no1fushi.net">相対パスの基準となる絶対パス(URL)を指定する(表示崩れるためコメントアウト)-->
 
 <!--css読み込み(type="text/css"は省略可能)-->
 	<link rel="stylesheet" href="/css/reset.css">
@@ -33,7 +42,6 @@
 <script src="/js/css3-mediaqueries.js"></script>
 <![endif]-->
 
-
 <!--googlefont(詳しくはドットインストールのGooglefont参照)-->
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Playball'>
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Pacifico'>
@@ -42,8 +50,8 @@
 
 </head><!--直後に空白文字かコメントがなければ省略可(この場合不可)-->
 
-<body><!--内容  内容が空か、最初の内容が空白文字かコメントでなければ省略可(この場合不可)-->
-<!--また、最初の要素が meta, link, script, style, template なら省略不可-->
+<body><!--内容  内容が空か、最初の内容が空白文字かコメントでなければ省略可(この場合不可)
+また、最初の要素が meta, link, script, style, template なら省略不可-->
 
 	<div id="container"><!--divはスタイルの指定の時以外は使わない-->
 		<header><!--ヘッダー(タイトルやナビなど)-->
@@ -51,11 +59,11 @@
 			<h1>タイトル</h1><!--本当はサイト名でh1を使うのはあまり良くない-->
 			<nav><!--メインナビゲーション(あくまでメインのナビ以外には使ってはいけない)-->
 
-				<ul>
-					<li><a href="">ナビ1</a><!--/liはliが続くか親要素(この場合ul)にこれ以上内容がないなら省略可-->
-					<li><a href="">ナビ2</a>
-					<li><a href="">ナビ3</a>
-					<li><a href="">ナビ4</a>
+				<ul><!--リスト-->
+					<li><a href="http://no1fushi.net">ナビ1</a><!--/liはliが続くか親要素(この場合ul)にこれ以上内容がないなら省略可-->
+					<li><a href="/top/index.html">ナビ2</a><!--aタグはリンクを表す-->
+					<li><a href="#container">ナビ3</a>
+					<li><a href="">ナビ4</a><!--ナビ1は絶対パス(URL)2は相対パス(ファイルの場所)3はそのページ内のid-->
 					<li><a href="">ナビ5</a>
 				</ul>
 			</nav>
@@ -68,15 +76,15 @@
 				<h3>見出し</h3>
 				<p>/p は直後に address, article, aside, blockquote, details, div, dl, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, main, menu, nav, ol, p, pre, section, table, ul 要素が続くか、親要素が a, audio, del, ins, map, noscript, video 以外で親要素にそれ以上内容がなければ省略可</p>
 				<p>text
-				<br><!--改行-->
+				<br><!--強制改行-->
 				text</p>
 				<hr><!--線-->
 			</section><!--コンテンツ内の見出しごとの区切り(artickeから独立も可、sectionの下層も可)-->
 
 			<section>
 				<h3>見出し</h3>
-				<p>text</p>
-				<p>text</p>
+				<p>pタグは段落を表す</p>
+				<p>texttexttexttexttexttexttexttexttexttexttext<wbr><!--改行してもよい(ウィンドウサイズなど)--> texttexttexttexttexttexttexttexttexttext</p>
 				<p>text</p>
 				<section>
 					<h3>見出し</h3>
@@ -92,12 +100,67 @@
 			<div class="advertising"></div>
 			<div class="advertising">
 				<ul>
-					<li>ナビ</li>
-					<li>ナビ</li>
-					<li>ナビ</li>
+					<li>ナビ
+					<li>ナビ
+					<li>ナビ
 				</ul>
 			</div>
 		</aside>
+
+		<div id="form"><!--お問い合わせフォームなど-->
+			<form action="hoge.php" method="post">
+				<label>メール:<input type="email" name="email"></label>
+				<input type="submit" value="送信">
+			</form>
+			<form action="hoge.php" method="post">
+				<label>URL:<input type="url" name="url"></label>
+				<input type="submit" value="送信">
+			</form>
+			<form action="hoge.php" method="post"><label>検索:
+				<input type="search" name="search"></label>
+				<input type="submit" value="送信">
+			</form>
+			<form action="hoge.php" method="post">
+				<label>電話:<input type="tel" name="tel"></label>
+				<input type="submit" value="送信">
+			</form>
+			<form action="hoge.php" method="post">
+				<label>数値:<input type="number" name="number"></label>
+				<input type="submit" value="送信">
+			</form>
+			<form action="hoge.php" method="post">
+				<label>日付:<input type="date" name="date"></label>
+				<input type="submit" value="送信">
+			</form>
+			<form action="hoge.php" method="post">
+				<label>日時:<input type="datetime" name="datetime"></label>
+				<input type="submit" value="送信">
+			</form>
+			<form action="hoge.php" method="post">
+				<label>ローカル日時:<input type="datetime-local" name="datetime-local"></label>
+				<input type="submit" value="送信">
+			</form>
+			<form action="hoge.php" method="post">
+				<label>月:<input type="month" name="month"></label>
+				<input type="submit" value="送信">
+			</form>
+			<form action="hoge.php" method="post">
+				<label>週:<input type="week" name="week"></label>
+				<input type="submit" value="送信">
+			</form>
+			<form action="hoge.php" method="post">
+				<label>時間:<input type="time" name="time"></label>
+				<input type="submit" value="送信">
+			</form>
+			<form action="hoge.php" method="post"
+			><label>レンジ:<input type="range" name="range"></label>
+			<input type="submit" value="送信">
+			</form>
+			<form action="hoge.php" method="post">
+			<label>色:<input type="color" name="color"></label>
+			<input type="submit" value="送信">
+			</form>
+		</div>
 
 		<footer><!--フッター(下のヘッダー)-->
 			<p>Copyright&copy; <a href="">text</a> All Rights Reserved</p><!--コピーライト-->
@@ -108,6 +171,8 @@
 
 <!---JavaScript(読み込み速度のためできるだけ最後に書く)type="text/javascript"は省略可能-->
 <script src="/js/footer.js"></script>
+<!--Javascript直書き-->
+<script></script>
 
 </body><!--直後にコメントが続かなければ省略可(この場合不可)-->
 
