@@ -73,9 +73,9 @@ int main(void){
 	scanf("%d", &mode);
 
 	switch(mode){
-	    case 1:kotae = plus();
+		case 1:kotae = plus();
 			break;
-	    case 2:kotae = minus();
+		case 2:kotae = minus();
 			break;
 		case 3:kotae = multi();
 			break;
