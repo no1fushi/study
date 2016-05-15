@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 int main(void){
-	unsigned char str[3];
+	char str[3];
 	int i[3];
 	int r,l;
 
-	scanf_s("%[3]s", str);
+	gets_s(str);
 
 	i[0] = str[0];
 	i[1] = str[1];
@@ -16,7 +16,9 @@ int main(void){
 	srand(r);
 
 	for (l = 0;l<3;l++){
-		printf("iの値%d\n", i);
+		printf("rの値は%d\n",r);
+		printf("i[0]の値は%d\n", i[0]);
+		printf("i[1]の値は%d\n", i[1]);
 		printf("乱数は%d\n", rand());
 	}
 
