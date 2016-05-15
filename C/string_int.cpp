@@ -16,8 +16,8 @@ int main(void){
 	srand(r);
 
 	for (l = 0;l<3;l++){
-		printf("i‚Ì’l%d\n", i);
-		printf("—”‚Í%d\n", rand());
+		printf("iã®å€¤%d\n", i);
+		printf("ä¹±æ•°ã¯%d\n", rand());
 	}
 
 	return 0;
