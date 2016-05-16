@@ -6,14 +6,17 @@ C言語のお勉強です。
 あとactionの実行ファイルと対応している  
   
 ###【内容】  
-####・hello.cpp  
-####・study.cpp  
+####・hello.c  
+####・study.c  
 あんまり気にしちゃいけない
   
-####・jyanken.cpp  
+####・jyanken.c  
 コンソールでのジャンケーンゲーム  
 https://github.com/KNCT-KPC/lectureC/blob/master/Zyanken  
   
 ####proces  
 四則演算  
+  
+####study_01.c  
+割り算の余り、偶数か奇数か、約数  
   
