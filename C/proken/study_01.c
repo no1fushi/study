@@ -47,7 +47,7 @@ int main(void) {
 		}
 		break;
 	case 3:
-		puts("割る数を入力しなおしてください");
+		puts("約数を調べたい数を入力しなおしてください");
 		scanf("%d", &a);
 		puts("約数は");
 		for (i = 1;i<=a;i++) {
