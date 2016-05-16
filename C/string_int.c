@@ -8,7 +8,7 @@ int main(void){
 	int i[3];
 	int r,l;
 
-	fgets(str,3,stdin);
+	fgets(str,sizeof(str),stdin);
 	p = strchr(str, '\n');
 	if (p != NULL){*p = '\0';}
 
