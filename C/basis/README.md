@@ -17,19 +17,19 @@ actionの実行ファイルと対応してます
 ####・String.c  
 文字列  
   
-####・purs or printf.c  
+####・Purs_Printf.c  
 puts関数とprintf関数の違い  
   
-####・if.c  
+####・If.c  
 条件分岐(if文)、比較演算子、比較論理演算子  
   
 ####・Switch.c  
 条件分岐(switch文)  
   
-####・for.c  
+####・For.c  
 ループ処理(for文)  
   
-####・while.c  
+####・While.c  
 ループ処理(while文)  
   
 ####・Function.c  
