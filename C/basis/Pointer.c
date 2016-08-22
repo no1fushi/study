@@ -1,5 +1,5 @@
 //ポインタ(ポインタ変数)-場所(アドレス)を格納(覚えておく)ための変数-
-#include<stdio.h>
+#include <stdio.h>
 
 int main(void){
 
@@ -13,7 +13,7 @@ int main(void){
 	int b = 9;
 	p = &b;
 	printf("aの値は%d\n",a);
-	printf("bの値は%d\n",a);
+	printf("bの値は%d\n",b);
 	printf("pの値は%d",*p);
 
 return 0;

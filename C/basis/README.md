@@ -36,4 +36,6 @@ puts関数とprintf関数の違い
 関数  
 ####・Pointer.c  
 ポインタ  
+####・Array_Pointer.c  
+配列とポインタの関係  
   
