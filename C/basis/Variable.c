@@ -24,7 +24,7 @@ int main(void){
 	int e = d+10;
 	printf("eの値は%d\n",e );
 
-	printf("10/3の答えは%d\n",b/3);//こういう書き方もできる
+	printf("10/3の答えは%d\n",b/3);//こういう書き方もできる詳しくはc/apply/puts_printd.cを参照
 
 return 0;
 }
