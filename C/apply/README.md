@@ -6,7 +6,8 @@ actionの実行ファイルと対応してます
 ###【内容】  
   
 ####・Purs_Printf.c  
-puts関数とprintf関数の違い  
+CUIへの出力  
+puts関数とprintf関数の違い、使い方  
   
 ####・string_int.cpp  
 入力された文字列を乱数のシード値としてつかう  
