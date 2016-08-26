@@ -73,20 +73,5 @@ char 文字型
 unsigned 符号なし 負の数を扱えなくする代わりに正の数の扱える数を
 0～元の正の数+減った負の数にできる
 
-
-出力フォーマット指定子-printfなどで出力するときの指定子-
-%c  文字を出力する                           char
-%s  文字列を出力する                        char
-%d  整数を10進で出力する                   int,short
-%u  符号なし整数を10進で出力する         unsigned int&short
-%o  整数を8進で出力する                     int,short,unsignedint&short
-%x  整数を16進で出力する                   int,short,unsignedint&short
-%f  実数を出力する                            float
-%e  実数を指数表示で出力する             float
-%g  実数を最適な形式で出力する           float
-%ld 倍精度整数を10進で出力する           long
-%lu 符号なし倍精度整数を10進で出力する unsignedlong
-%lo 倍精度整数を8進で出力する             long,unsignedlong
-%lx 倍精度整数を16進で出力する           long,unsignedlong
-%lf 倍精度実数を出力する                    double
+%dなどの説明はc/apply/Puts_printf.cを参照
 */
