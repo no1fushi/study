@@ -44,7 +44,7 @@ double input(int i) {
 				continue;
 			}
 			if (a > 24) {
-				puts("24以上の数字が入力されました");
+				puts("24より大きい数宇の数字が入力されました");
 				puts("今何時?(24時間表記で)");
 				continue;
 			}
@@ -166,4 +166,3 @@ int main(void) {
 	puts("\n\nSystem all ok");
 	return 0;
 }
-
