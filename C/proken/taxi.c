@@ -1,4 +1,4 @@
-/*初乗り2㎞まで560円固定、以降130m毎で80円加算、
+﻿/*初乗り2㎞まで560円固定、以降130m毎で80円加算、
 1km毎に1%ずつ割引率が上昇（最大10％）、
 9円以下切り上げの料金設定のタクシーの料金計算システム。
 20時～6時は深夜料金2割増（割引や端数切り上げなどの計算後の乗車料金に更に上乗せ。この計算も最後に端数切り上げ）
@@ -51,7 +51,7 @@ double input(int i) {
 			break;
 		}
 	}
-	puts("input green");
+	puts("input ok");
 	return a;
 }
 
@@ -65,22 +65,22 @@ int roud(int x){
 			break;
 		}
 	}
-	puts("roud green");
+	puts("roud ok");
 	return x;
 }
 
-int cell(double kyori) {
+int Calc(double dist) {
 	int r,i = 0;
 	//waribiki
-	int a = (int)kyori/1;
+	int a = (int)dist/1;
 	double wari = a*0.01;
 	if (wari > 0.10) {
 		wari = 0.10;
 	}
 
-	//cell main
-	double x = kyori - 2.0;
-	if (kyori < 2) {
+	//Calc main
+	double x = dist - 2.0;
+	if (dist < 2) {
 		r = 560;
 	}else{
 		while(1){
@@ -93,7 +93,7 @@ int cell(double kyori) {
 		}
 	}
 	r = roud(r);
-	puts("cell green");
+	puts("Calc ok");
 	return r;
 }
 
@@ -108,62 +108,62 @@ int timePlus(int x, int time) {
 	else {
 		r = x;
 	}
-	puts("timePlus green");
+	puts("timePlus ok");
 	return r;
 }
 
-int hatu(int ninz) {
+int first(int peo) {
 	int r = 0;
-	if (ninz <= 4) {
+	if (peo <= 4) {
 		r = 1;
 	}
 	else {
 		while (1) {
-			ninz = ninz-4;
+			peo = peo-4;
 			r++;
-			if (ninz < 4) {
+			if (peo < 4) {
 				break;
 			}
 		}
 	}
-	puts("hatu green");
+	puts("first ok");
 	return r;
 }
 
-int output(int all,int ninz) {
+int output(int all,int peo) {
 	int x;
 	printf("合計は%d円\n",all);
-	x = all / ninz;
+	x = all / peo;
 	printf("一人あたり%d円",x);
 	return 0;
 }
 
 int main(void) {
-	int i, ninz, time,taxi,cellAns,all;
-	double kyori;
+	int i, peo, time,taxi,CalcAns,all;
+	double dist;
 
 	//input
 	for (i = 0; i <= 2; i++) {
 		if (i == 0) {
-			ninz = (int)input(i);
+			peo = (int)input(i);
 		}
 		else if (i == 1) {
-			kyori = input(i);
+			dist = input(i);
 		}
 		else if (i == 2) {
 			time = (int)input(i);
 		}
 	}
-	//cell
-	cellAns = cell(kyori);
+	//Calc
+	CalcAns = Calc(dist);
 	//time
-	cellAns = timePlus(cellAns,time);
+	CalcAns = timePlus(CalcAns,time);
 	//Taxi num
-	taxi = hatu(ninz);
-	all = cellAns*taxi;
+	taxi = first(peo);
+	all = CalcAns*taxi;
 	//output
-	output(all,ninz);
-	puts("\n\nSystem all green");
+	output(all,peo);
+	puts("\n\nSystem all ok");
 	return 0;
 }
 
