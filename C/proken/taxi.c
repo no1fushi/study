@@ -1,10 +1,3 @@
-﻿/*初乗り2㎞まで560円固定、以降130m毎で80円加算、
-1km毎に1%ずつ割引率が上昇（最大10％）、
-9円以下切り上げの料金設定のタクシーの料金計算システム。
-20時～6時は深夜料金2割増（割引や端数切り上げなどの計算後の乗車料金に更に上乗せ。この計算も最後に端数切り上げ）
-乗車人数、時間、距離を入力すると、1人当たりの料金と合計料金を返す。
-ただし、タクシー1台には4人までしか乗れない。人数が多い時にはタクシー追加。*/
-
 #include "stdio.h"
 #define _CRT_SECURE_NO_WARNINGS 1
 #pragma warning(disable:4996)
@@ -12,40 +5,58 @@
 double input(int i) {
 	double a;
 	if (i == 0) {
-		puts("何人乗る?");
 		while(1){
+			puts("何人ですか?(正の整数)");
 			if (scanf("%lf", &a) != 1) {
 			scanf("%*s");
 			if (feof(stdin)) return 1;
-			puts("正しい値を入力してください");
+			puts("文字か文字列が入力されました");
+			puts("数字を入力してください");
 			continue;
+			}
+			if( a < 0 ){
+				puts("0より小さい負の数が入力されました");
+				puts("0より大きい正の値を入力してください");
+				continue;
 			}
 			break;
 		}
 	}else if (i == 1) {
-		puts("目的地まで何キロ?");
 		while (1) {
+			puts("目的地まで何Kmですか?(mの場合は少数で)");
 			if (scanf("%lf", &a) != 1) {
 				scanf("%*s");
 				if (feof(stdin)) return 1;
-				puts("正しい値を入力してください");
+				puts("文字か文字列が入力されました");
+				puts("数字を入力してください");
+				continue;
+			}
+			if (a < 0) {
+				puts("0より小さい負の数が入力されました");
+				puts("0より大きい正の値を入力してください");
 				continue;
 			}
 			break;
 		}
 	}
 	else if (i == 2) {
-		puts("今何時?(24時間表記で)");
 		while (1) {
+			puts("今何時ですか?(24時間表記で)");
 			if (scanf("%lf", &a) != 1) {
 				scanf("%*s");
 				if (feof(stdin)) return 1;
-				puts("正しい値を入力してください");
+				puts("文字か文字列が入力されました");
+				puts("数字を入力してください");
 				continue;
 			}
 			if (a > 24) {
 				puts("24より大きい数宇の数字が入力されました");
-				puts("今何時?(24時間表記で)");
+				puts("24以下の数字を入力してください");
+				continue;
+			}
+			if (a < 0) {
+				puts("0より小さい負の数が入力されました");
+				puts("0より大きい正の値を入力してください");
 				continue;
 			}
 			break;
@@ -166,3 +177,4 @@ int main(void) {
 	puts("\n\nSystem all ok");
 	return 0;
 }
+
