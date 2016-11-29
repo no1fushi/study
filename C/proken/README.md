@@ -20,3 +20,9 @@ https://github.com/KNCT-KPC/lectureC/blob/master/Zyanken
 ####study_01.c  
 割り算の余り、偶数か奇数か、約数  
   
+####taxi.c  
+タクシーの値段の計算。課題  
+  
+####ribo.c
+リボ払いの計算。課題  
+  
