@@ -3,14 +3,14 @@
 C言語のお勉強です。  
 未完  
   
-###【内容】  
-####・basis  
+### 【内容】  
+#### ・basis  
 C言語の基本構文。  
   
-####・apply  
+#### ・apply  
 C言語の応用(基本構文以外、関数など)  
   
-####・proken  
+#### ・proken  
 [釧路高専プログラミング研究会](http://kpc.nitkc.org)でやったこと  
 なお、[プロ研のgithub](https://github.com/KNCT-KPC)にあるため自分流に書いたものだけ上げる  
   
