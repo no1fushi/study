@@ -1,26 +1,26 @@
-ï»¿#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <mbstring.h>
 #include <string.h>
 #include <locale.h>
 #include <stdlib.h>
 
-char *eval(char *buf,int count) {
-	char *string[102] = { "ã‚","ã„","ã†","ãˆ","ãŠ","a","b","c","d","e","ã‹","ã","ã","ã‘","ã“","f","g","h","y","j","ã•","ã—","ã™","ã›","ã","k","l","m","n","o","ãŸ","ã¡","ã¤","ã¦","ã¨","p","q","r","s","t","ãª","ã«","ã¬","ã­","ã®","u","v","w","x","y","ã¯","ã²","ãµ","ã¸","ã»","z","?","!","-","/","ã¾","ã¿","ã‚€","ã‚","ã‚‚","","&","","","","ã‚„","(","ã‚†",")","ã‚ˆ","*","#","","","","ã‚‰","ã‚Š","ã‚‹","ã‚Œ","ã‚","1","2","3","4","5","ã‚","ã‚’","ã‚“","","","6","7","8","9","10","\n" };
-	int poke[256],pokee[256];
+char *eval(char *buf, int count) {
+	char *string[102] = { "‚ ","‚¢","‚¤","‚¦","‚¨","a","b","c","d","e","‚©","‚«","‚­","‚¯","‚±","f","g","h","i","j","‚³","‚µ","‚·","‚¹","‚»","k","l","m","n","o","‚½","‚¿","‚Â","‚Ä","‚Æ","p","q","r","s","t","‚È","‚É","‚Ê","‚Ë","‚Ì","u","v","w","x","y","‚Í","‚Ğ","‚Ó","‚Ö","‚Ù","z","?","!","-","/","‚Ü","‚İ","‚Ş","‚ß","‚à","","&","","","","‚â","(","‚ä",")","‚æ","*","#","","","","‚ç","‚è","‚é","‚ê","‚ë","1","2","3","4","5","‚í","‚ğ","‚ñ","","","6","7","8","9","0","\n" };
+	int poke[256], pokee[256];
 	char str[256];
-	int i = 0,c = 0,z = 0,l;
-	int j = 1,len,ret,zen,kou;
+	int i = 0, c = 0, z = 0, l;
+	int j = 1, len, ret, zen, kou;
 
 	while (strcmp(&buf[i], "\0") != 0) {
 		len = mblen(&buf[i], MB_CUR_MAX);
-		if(len == 1){
+		if (len == 1) {
 			z++;
 			sprintf(str, "%c", buf[i]);
 			for (l = 0; l < 102;l++) {
 				ret = strcmp(str, string[l]);
 				if (ret == 0) {
-					if ((l >= 0) && (l <= 9)) { zen = 1; kou = l + 1;}
+					if ((l >= 0) && (l <= 9)) { zen = 1; kou = l + 1; }
 					else if ((l >= 10) && (l <= 19)) { zen = 2; kou = l - 10 + 1; }
 					else if ((l >= 20) && (l <= 29)) { zen = 3; kou = l - 20 + 1; }
 					else if ((l >= 30) && (l <= 39)) { zen = 4; kou = l - 30 + 1; }
@@ -29,40 +29,43 @@ char *eval(char *buf,int count) {
 					else if ((l >= 60) && (l <= 69)) { zen = 7; kou = l - 60 + 1; }
 					else if ((l >= 70) && (l <= 79)) { zen = 8; kou = l - 70 + 1; }
 					else if ((l >= 80) && (l <= 89)) { zen = 9; kou = l - 80 + 1; }
-					else { zen = 0; kou = l - 90; }
+					else if ((l >= 90) && (l <= 99)) { zen = 0; kou = l - 90 + 1; }
+					else { puts("‘ÎÛŠO‚Ì•¶š‚ª“ü—Í‚³‚ê‚Ü‚µ‚½"); }
 					poke[c] = zen;
 					pokee[c] = kou;
 					break;
-				}
+				}else { puts("‘ÎÛŠO‚Ì•¶š‚ª“ü—Í‚³‚ê‚Ü‚µ‚½");exit(0); }
 			}
-			if (strcmp(&buf[j], "\0") != 0){
+			if (strcmp(&buf[j], "\0") != 0) {
 				sprintf(str, "%c", buf[j]);
 				for (l = 0; l < 102;l++) {
 					ret = strcmp(str, string[l]);
 					if (ret == 0) {
-						if ((l >= 0) && (l <= 9)) { zen = 1; kou = l + 1;}
-						else if ((l >= 10) && (l <= 19)) { zen = 2; kou = l - 10 + 1;}
-						else if ((l >= 20) && (l <= 29)) { zen = 3; kou = l - 20 + 1;}
-						else if ((l >= 30) && (l <= 39)) { zen = 4; kou = l - 30 + 1;}
-						else if ((l >= 40) && (l <= 49)) { zen = 5; kou = l - 40 + 1;}
-						else if ((l >= 50) && (l <= 59)) { zen = 6; kou = l - 50 + 1;}
-						else if ((l >= 60) && (l <= 69)) { zen = 7; kou = l - 60 + 1;}
-						else if ((l >= 70) && (l <= 79)) { zen = 8; kou = l -70 + 1;}
-						else if ((l >= 80) && (l <= 89)) { zen = 9; kou = l - 80 + 1;}
-						else { zen = 0; kou = l - 90;}
-						poke[c+1] = zen;
-						pokee[c+1] = kou;
+						if ((l >= 0) && (l <= 9)) { zen = 1; kou = l + 1; }
+						else if ((l >= 10) && (l <= 19)) { zen = 2; kou = l - 10 + 1; }
+						else if ((l >= 20) && (l <= 29)) { zen = 3; kou = l - 20 + 1; }
+						else if ((l >= 30) && (l <= 39)) { zen = 4; kou = l - 30 + 1; }
+						else if ((l >= 40) && (l <= 49)) { zen = 5; kou = l - 40 + 1; }
+						else if ((l >= 50) && (l <= 59)) { zen = 6; kou = l - 50 + 1; }
+						else if ((l >= 60) && (l <= 69)) { zen = 7; kou = l - 60 + 1; }
+						else if ((l >= 70) && (l <= 79)) { zen = 8; kou = l - 70 + 1; }
+						else if ((l >= 80) && (l <= 89)) { zen = 9; kou = l - 80 + 1; }
+						else if ((l >= 90) && (l <= 99)) { zen = 0; kou = l - 90 + 1; }
+						else { puts("‘ÎÛŠO‚Ì•¶š‚ª“ü—Í‚³‚ê‚Ü‚µ‚½"); }
+						poke[c + 1] = zen;
+						pokee[c + 1] = kou;
 						break;
-					}
+					}else { puts("‘ÎÛŠO‚Ì•¶š‚ª“ü—Í‚³‚ê‚Ü‚µ‚½");exit(0); }
 				}
 			}
-		}else{
-			sprintf(str,"%c%c", buf[i], buf[j]);
+		}
+		else {
+			sprintf(str, "%c%c", buf[i], buf[j]);
 			for (l = 0; l < 102;l++) {
 				ret = strcmp(str, string[l]);
 				if (ret == 0) {
-					if ((l >= 0) && (l <= 9)) { zen = 1; kou = l + 1;}
-					else if ((l >= 10) && (l <= 19)) { zen = 2; kou = l - 10 + 1 ; }
+					if ((l >= 0) && (l <= 9)) { zen = 1; kou = l + 1; }
+					else if ((l >= 10) && (l <= 19)) { zen = 2; kou = l - 10 + 1; }
 					else if ((l >= 20) && (l <= 29)) { zen = 3; kou = l - 20 + 1; }
 					else if ((l >= 30) && (l <= 39)) { zen = 4; kou = l - 30 + 1; }
 					else if ((l >= 40) && (l <= 49)) { zen = 5; kou = l - 40 + 1; }
@@ -70,46 +73,47 @@ char *eval(char *buf,int count) {
 					else if ((l >= 60) && (l <= 69)) { zen = 7; kou = l - 60 + 1; }
 					else if ((l >= 70) && (l <= 79)) { zen = 8; kou = l - 70 + 1; }
 					else if ((l >= 80) && (l <= 89)) { zen = 9; kou = l - 80 + 1; }
-					else { zen = 0; kou = l - 90; }
+					else if ((l >= 90) && (l <= 99)) { zen = 0; kou = l - 90 + 1; }
+					else { puts("‘ÎÛŠO‚Ì•¶š‚ª“ü—Í‚³‚ê‚Ü‚µ‚½"); }
 					poke[c] = zen;
 					pokee[c] = kou;
 					break;
-				}
+				}else{ puts("‘ÎÛŠO‚Ì•¶š‚ª“ü—Í‚³‚ê‚Ü‚µ‚½");exit(0);}
 			}
 		}
 		i = i + 2;
 		j = j + 2;
 
-		if(z == 0){
+		if (z == 0) {
 			c++;
-		}else{
-			c =c + 2;
+		}
+		else {
+			c = c + 2;
 			z = 0;
 		}
 	}
-	
-	printf("æš—å·ã¯");
+
+	printf("ˆÃ†‚Í");
 	for (i = 0; i < count;i++) {
-		if(pokee[i] == 10){pokee[i] = 0; }
-		printf("%d%d ", poke[i],pokee[i]);
+		if (pokee[i] == 10) { pokee[i] = 0; }
+		printf("%d%d ", poke[i], pokee[i]);
 	}
-	printf("ã§ã™\n\n");
+	printf("‚Å‚·\n\n");
 	return 0;
 }
 
-//14æ–‡å­—
+//14•¶š
 char *input() {
 	int count = 0;
 	char buf[29];
-	char a[29];
 	while (1) {
 		int     i1;
 		size_t length;
 		//input
-		puts("æ–‡å­—ã‚’14æ–‡å­—ä»¥å†…ã®ç¯„å›²ã§å…¥åŠ›ã—ã¦ãã ã•ã„");
-		puts("æ¿ç‚¹,åŠæ¿ç‚¹ã®ã‚ã‚‹ã²ã‚‰ãŒãªã€æ¼¢å­—ã€å¤§æ–‡å­—ã®ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆä»¥å¤–");
+		puts("•¶š‚ğ14•¶šˆÈ“à‚Ì”ÍˆÍ‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+		puts("‘÷“_,”¼‘÷“_‚Ì‚ ‚é‚Ğ‚ç‚ª‚ÈAŠ¿šA‘å•¶š‚ÌƒAƒ‹ƒtƒ@ƒxƒbƒgˆÈŠO");
 		if (fgets(buf, sizeof(buf), stdin) == NULL || buf[0] == '\n') {
-			puts("ç©ºç™½ãŒå…¥åŠ›ã•ã‚Œã¾ã—ãŸã€‚æ–‡å­—ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚");
+			puts("‹ó”’‚ª“ü—Í‚³‚ê‚Ü‚µ‚½B•¶š‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B");
 			continue;
 		}
 		length = strlen(buf);
@@ -129,24 +133,66 @@ char *input() {
 			count++;
 			i1++;
 		}
-		printf("æ–‡å­—æ•°:%d\n", count);
+		printf("•¶š”:%d\n", count);
 		if (count > 14) {
-			printf("å…¥åŠ›ã—ãŸæ–‡å­—åˆ—ã¯%s/n", buf);
-			puts("15æ–‡å­—ä»¥ä¸Šå…¥åŠ›ã—ã¦ã„ã¾ã™,ã‚‚ã†ä¸€åº¦å®Ÿè¡Œã—ã¦ãã ã•ã„");
-			exit(0);
+			char key = NULL;
+			printf("“ü—Í‚µ‚½•¶š—ñ‚Í%s/n", buf);
+			puts("15•¶šˆÈã“ü—Í‚µ‚Ä‚¢‚Ü‚·,‚à‚¤ˆê“xÀs‚µ‚Ä‚­‚¾‚³‚¢");
+			scanf("%c", &key);
+			if (key != NULL) {
+				system("cls");
+				key = NULL;
+			}
+			input();
+			scanf("%c", &key);
+			if (key != NULL) {
+				system("cls");
+				key = NULL;
+			}
 		}
 		else {
-			printf("å…¥åŠ›ã—ãŸæ–‡å­—åˆ—ã¯%s\n", buf);
+			printf("“ü—Í‚µ‚½•¶š—ñ‚Í%s\n", buf);
 			break;
 		}
 	}
-	eval(buf,count);
+	eval(buf, count);
 	return 0;
 }
 
 int main(void) {
-	int i = 0;
-	input();
-	scanf("%d",i);
+	int i = 0,set;
+	char key = NULL;
+	while(1){
+		puts("ˆÃ†‰»(1),I‚í‚é(2)");
+		puts("()‚Ì’†‚Ì”š‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+
+		if (scanf("%d", &set) != 1) {
+			scanf("%*s");
+			if (feof(stdin)) return 1;
+			puts("•¶š‚©•¶š—ñ‚ª“ü—Í‚³‚ê‚Ü‚µ‚½");
+			puts("1-2‚Ì”‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+			continue;
+		}
+
+		if (set == 1) {
+			scanf("%c", &key);
+			if (key != NULL) {
+				system("cls");
+				key = NULL;
+			}
+			input();
+			scanf("%c", &key);
+			if (key != NULL) {
+				system("cls");
+				key = NULL;
+			}
+		}else if(set == 2){
+			exit(0);
+		}else{
+			puts("1~2ˆÈŠO‚Ì”‚ª“ü—Í‚³‚ê‚Ü‚µ‚½");
+			puts("1~2‚Ì”‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+			continue;
+		}
+	}
 	return 0;
 }
