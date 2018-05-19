@@ -10,6 +10,15 @@ C言語のお勉強です。
 #### ・study.c  
 あんまり気にしちゃいけない
   
+#### ・RockGetGame.c  
+コンソールで石取りゲーム  
+  
+#### ・Carddraw.c  
+3ターンおきにトランプからカードを配る  
+  
+#### ・Carddrop.c  
+カードを配って捨てる  
+  
 #### ・jyanken.c  
 コンソールでのジャンケーンゲーム  
 https://github.com/KNCT-KPC/lectureC/blob/master/Zyanken  
